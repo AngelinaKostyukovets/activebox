@@ -1,0 +1,115 @@
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #BABBC5;
+
+    @media (max-width:768px){
+        border-bottom: none;
+        padding: 20px 0;
+    }
+
+    .logo img{
+        @media (max-width:768px){
+            height: 14.35px;
+        }
+    }
+
+    .navigation-list{
+        display: flex;
+
+        &__item{
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 15px;
+
+            @media (max-width:1200px) {
+                font-size: 12px;
+                line-height: 14px;
+            }
+
+            a{
+                display: block;
+                position: relative;
+                color: #FFFFFF;
+                transition: 1s;
+                padding: 42.5px 0;
+                width: 134px;
+                text-align: center;
+
+                @media (max-width:1200px) {
+                    width: 112px;
+                }
+
+                &:hover::after{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 3px;
+                    background: #BABBC5;
+                    transition: 1s;
+                }
+
+                &:active{
+                    color: #E71414;
+
+                    &::after{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 3px;
+                        background: #E71414;
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+    }
+
+    .burger{
+
+        @media (max-width:768px){
+            position: relative;
+            background: #FFFFFF;
+            width: 24px;
+            height: 3px;
+            margin-right: 15px;
+        }
+        &::before{
+            @media (max-width:768px){
+                content: '';
+                position: absolute;
+                background: #FFFFFF;
+                width: 24px;
+                height: 3px;
+                top: -7px;
+                left: 0;
+            }
+        }
+        
+        &::after{
+            @media (max-width:768px){
+                content: '';
+                position: absolute;
+                background: #FFFFFF;
+                width: 24px;
+                height: 3px;
+                bottom: -7px;
+                left: 0;
+            }
+        }
+    }
+
+
+}
+
+.navigation{
+    @media (max-width:768px){
+        display: none;
+    }
+}

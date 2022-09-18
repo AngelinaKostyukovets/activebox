@@ -1,0 +1,23 @@
+@mixin text-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;  
+    
+    @media (max-width:1200px){
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+@mixin text-title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+
+    @media (max-width:1200px){
+        font-size: 18px;
+        line-height: 21px;
+    }
+}
