@@ -1,0 +1,108 @@
+.team-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 114px 0;
+
+    @media (max-width:1200px){
+        padding: 78px 0;
+        gap: 25px;
+    }
+
+    @media (max-width:768px){
+        padding: 35px 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 49px;
+    }
+
+    &-card__img{
+
+        @media (max-width:768px){
+            height: 39%;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-card__name{
+        @include text-title;
+        font-weight: 700;
+        margin-top: 30px;
+        color: #2D3033;
+
+        @media (max-width:1200px){
+            margin-top: 25px;
+        }
+    }
+
+    &-card__profession{
+        color: $cl-btn;
+        @include text-description;
+        text-transform: uppercase;
+        margin-top: 6px;
+    }
+
+    &-card__description{
+        @include text-description;
+        color: #6C7279;
+        margin-top: 18px;
+
+        @media (max-width:1200px){
+            margin-top: 22px;
+        }
+
+        @media (max-width:768px){
+            margin-top: 38px;
+        }
+    }
+    
+    &-card-contact{
+        display: flex;
+        margin-top: 38px;
+
+        @media (max-width:768px){
+            margin-top: 55px;
+        }
+
+        &__item{
+            width: 39px;
+            height: 39px;
+            margin-right: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #C6CBCD;
+
+            @media (max-width:1200px){
+                width: 32.8px;
+                height: 32.8px;
+            }
+
+            @media (max-width:768px){
+                width: 39.61px;
+                height: 39.61px;
+            }
+
+            a {
+                display: flex;
+
+                svg{
+                    fill: #C6CBCD;
+
+                    @media (max-width:1200px){
+                        transform: scale(0.84);
+                    }
+                    
+                    @media (max-width:768px){
+                        transform: scale(0.9);
+                    }
+                }
+            }
+        }
+    }
+}
