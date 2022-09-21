@@ -1,0 +1,131 @@
+.footer{
+    background: #353C65;
+    padding: 71px 0;
+
+    @media (max-width:1200px){
+        padding: 46.5px 0 41px;
+    }
+
+    @media (max-width:768px){
+        padding: 33.5px 0;
+    }
+
+    &-content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @media (max-width:1200px){
+            gap: 20px;
+        }
+
+        @media (max-width:768px){
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 59px;
+        }
+
+        &-card--pad{
+            @media (max-width:768px){
+                padding-top: 10px;
+            }
+        }
+
+        &-card__title{
+            @include text-description;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        &-card__description{
+            @include text-description;
+            color: #FFFFFF;
+            text-transform: capitalize;
+            margin-top: 29px;
+            text-align: center;
+
+            @media (max-width:1200px){
+                margin-top: 17px;
+            }
+
+            @media (max-width:768px){
+                margin-top: 35px;
+            }
+        }
+
+        &-card-contact{
+            margin-top: 49px;
+            display: flex;
+            justify-content: center;
+
+            @media (max-width:1200px){
+                margin-top: 32.5px;
+            }
+
+            &__item{
+                width: 39px;
+                height: 39px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #C6CBCD;
+
+                @media (max-width:1200px){
+                    width: 33px;
+                    height: 33px;
+                }
+
+                a {
+                    display: flex;
+    
+                    svg{
+                        fill: #C6CBCD;
+    
+                        @media (max-width:1200px){
+                            transform: scale(0.84);
+                        }
+                        
+                        @media (max-width:768px){
+                            transform: scale(0.9);
+                        }
+                    }
+                }
+            }
+
+            &__item:not(:last-child){
+                margin-right: 26px;
+
+                @media (max-width:1200px){
+                    margin-right: 23px;
+                }
+            }
+        }
+    }
+}
+
+.footer-copyright{
+    background: #2C3154;
+
+    &__text{
+        padding: 24px 0;
+        margin: 0 auto;
+        @include text-description;
+        color: #808080;
+        max-width: 370px;
+        text-align: center;
+
+        @media (max-width:1200px){
+            padding: 14.5px 0;
+        }
+
+        @media (max-width:768px){
+            padding: 29px 20px;
+        }
+
+        span{
+            color: #FFFFFF;
+        }
+    }
+}
